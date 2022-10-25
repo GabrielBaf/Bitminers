@@ -1,16 +1,14 @@
 using System.Collections;
 using UnityEngine.Networking;
 using UnityEngine;
-using UnityEngine.UI;
 
-public class PlayerAccount : MonoBehaviour
+public class MintNft : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
     {
         string account = PlayerPrefs.GetString("Account");
-        StartCoroutine(LoginCheck(account));
-       
+        StartCoroutine(MintNftFunc(account));
     }
 
     // Update is called once per frame
@@ -19,12 +17,13 @@ public class PlayerAccount : MonoBehaviour
         
     }
 
-    IEnumerator LoginCheck(string pAccount)
+    IEnumerator MintNftFunc(string pAccount)
     {
         WWWForm form = new WWWForm();
         form.AddField("wallet_address", pAccount);
+        
 
-        using (UnityWebRequest www = UnityWebRequest.Post("http://127.0.0.1:8000/api/check-user", form))
+        using (UnityWebRequest www = UnityWebRequest.Post("http://127.0.0.1:8000/api/check-user/", form))
         {
             yield return www.SendWebRequest();
 
@@ -35,8 +34,20 @@ public class PlayerAccount : MonoBehaviour
             else
             {
                 Debug.Log(www.downloadHandler.text);
-                string data = www.downloadHandler.text;
-                print(data);
+            }
+        }
+
+        using (UnityWebRequest www2 = UnityWebRequest.Post("http://127.0.0.1:8000/api/mint-nft/", form))
+        {
+            yield return www2.SendWebRequest();
+
+            if (www2.result != UnityWebRequest.Result.Success)
+            {
+                Debug.Log(www2.error);
+            }
+            else
+            {
+                Debug.Log(www2.downloadHandler.text);
             }
         }
     }

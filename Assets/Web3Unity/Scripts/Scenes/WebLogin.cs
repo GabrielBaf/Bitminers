@@ -1,7 +1,8 @@
-﻿using System;
-using System.Runtime.InteropServices;
+﻿using System.Runtime.InteropServices;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.Collections;
+using UnityEngine.Networking;
 
 #if UNITY_WEBGL
 public class WebLogin : MonoBehaviour
@@ -35,6 +36,7 @@ public class WebLogin : MonoBehaviour
         PlayerPrefs.SetString("Account", account);
         // reset login message
         SetConnectAccount("");
+
         // load next scene
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
