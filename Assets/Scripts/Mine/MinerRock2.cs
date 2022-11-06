@@ -1,8 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
-public class MinerSprite : MonoBehaviour
+
+public class MinerRock2 : MonoBehaviour
 {
     public Sprite[] sprites;
     private int oldSprite;
@@ -74,24 +74,4 @@ public class MinerSprite : MonoBehaviour
     oldSprite = newSprite;
      
     }
-// public static LootCalc(){
-//         foreach (var item in minerios)
-//         {
-//             lootValueMax += item;
-//         }
-//      lootValue = Random.Range(0,lootValueMax);
-
-//         for(int i =0; i <= minerios.Length;i++){
-//             if(randomNumber <= table[i])
-//             {
-//                 oreType = mineriosNomes[i];
-//                 return;
-//             }else
-//             {
-//                 randomNumber -= table[i];
-//             }
-//     }
-// }
- 
 }
-
