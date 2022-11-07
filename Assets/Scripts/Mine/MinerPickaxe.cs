@@ -6,6 +6,7 @@ public class MinerPickaxe : MonoBehaviour
 {
 	public int damage;
     public MinerSprite miner;
+    public Miner minerStats;
     private float time = 0.0f;
     public float delayTime = 10.0f;
  /* private void OnTriggerEnter2D(Collider2D col){
@@ -33,9 +34,9 @@ public class MinerPickaxe : MonoBehaviour
      MinerTime();
   }
   public void MinerTime(){
-      StartCoroutine(ExecuteAfterTime(3));
-      StartCoroutine(ExecuteAfterTime(6));
-      StartCoroutine(ExecuteAfterTime(9));
+      StartCoroutine(ExecuteAfterTime(minerStats.PresenteMiningSpeed/3));
+      StartCoroutine(ExecuteAfterTime(minerStats.PresenteMiningSpeed/2));
+      StartCoroutine(ExecuteAfterTime(minerStats.PresenteMiningSpeed));
   }
 
 }
