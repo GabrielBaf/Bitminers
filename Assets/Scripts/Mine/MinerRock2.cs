@@ -50,11 +50,9 @@ public class MinerRock2 : MonoBehaviour
                 if(i == 0){
                     UI.mineredBronz ++;
                 }else if(i == 1){
-                     UI.mineredIron ++;
-                   
+                    UI.mineredIron ++;
                 }else{
-                    UI.mineredDiamond ++;
-                    
+                    UI.mineredDiamond ++; 
                 }
                 hitPoints = 3;
                 lootValueMax = 0;
