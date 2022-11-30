@@ -4,15 +4,11 @@ using UnityEngine;
 
 public class MininGacha : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+   // public Miner miner;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+   // void GetNewMiner(){
+   //  bool gotMiner = MinerInventory.instance.Add(Miner);
+   //  if(gotMiner)
+   //      Debug.Log("New miner add");
+   // }
 }

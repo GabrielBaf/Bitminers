@@ -18,7 +18,15 @@ MonoBehaviour:
   - ultrarare
   - legendary
   minerSprite: {fileID: 8652789080126840360, guid: 3934b39f5459b5b4181043ac8061100b, type: 3}
+  minerUIPref: {fileID: 8390002435652553403, guid: f0678d26361eb7446bc110ada1f532cf, type: 3}
+  sprite: {fileID: 21300000, guid: 3df9be6a6388a924b97c522621357111, type: 3}
   rarity: common
   startingMiningSpeed: 24
   maxMiningSpeed: 23
   upgradeTimeMiningSpeed: 0
+  mineChance:
+  - 70
+  - 15
+  - 10
+  - 4.5
+  - 0.5

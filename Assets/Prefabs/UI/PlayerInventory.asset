@@ -9,17 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: db3a489212ea0d841bdab4e6d95e2f2a, type: 3}
-  m_Name: Miner
+  m_Script: {fileID: 11500000, guid: d789edd0ca1face409117d7fe4021374, type: 3}
+  m_Name: PlayerInventory
   m_EditorClassIdentifier: 
-  rarityOptions:
-  - common
-  - rare
-  - ultrarare
-  - legendary
-  rarity: 
-  startingMiningSpeed: 0
-  presenteMiningSpeed: 0
-  maxMiningSpeed: 0
-  upgradeTimeMiningSpeed: 0
-  mineChance: []
+  container: []

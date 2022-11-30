@@ -1,18 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+
 
 [CreateAssetMenu(fileName = "Miner", menuName = "Inventory/Miner")]
 public class Miner : ScriptableObject {
 	//bronze,iron,silver,gold,diamond
 	public string[] rarityOptions = {"common","rare","ultrarare","legendary"};
 	public GameObject minerSprite;
+	public GameObject minerUIPref;
+	public Sprite sprite;
 	public string rarity;
 	public float startingMiningSpeed;
 	private float presenteMiningSpeed;
 	public float maxMiningSpeed;
 	public float upgradeTimeMiningSpeed;
-	private float[] mineChance;
+	public float[] mineChance;
 
 
 	public float PresenteMiningSpeed{
@@ -90,42 +94,42 @@ public class Miner : ScriptableObject {
 			}else{}
         }
     }
-	public float[] MineChance{
-		get 
-        {    
-            return mineChance; 
-        }
-        set {
-			if(rarity == rarityOptions[0]){
-				mineChance[0] = 70f;
-				mineChance[1] = 15f;
-				mineChance[2] = 10f;
-				mineChance[3] = 4.5f;
-				mineChance[4] = 0.5f;
-			}else if(rarity == rarityOptions[1]){
-				mineChance[0] = 65f;
-				mineChance[1] = 20f;
-				mineChance[2] = 10f;
-				mineChance[3] = 4.5f;
-				mineChance[4] = 0.5f;
-				//mineChance = {65f,20f,10f,4.5f,0.5f};
-			}else if(rarity == rarityOptions[2]){
-				mineChance[0] = 55f;
-				mineChance[1] = 20f;
-				mineChance[2] = 15f;
-				mineChance[3] = 9.5f;
-				mineChance[4] = 0.5f;
-				//mineChance = {55f,20f,15f,9.5f,0.5f};
-			}else if(rarity == rarityOptions[3]){
-				mineChance[0] = 45f;
-				mineChance[1] = 15f;
-				mineChance[2] = 20f;
-				mineChance[3] = 15f;
-				mineChance[4] = 5f;
-				//mineChance = {45f,15f,20f,15f,5f};
-			}else{}
-		}
-	} 
+	// public float[] MineChance{
+	// 	get 
+    //     {    
+    //         return mineChance; 
+    //     }
+    //     set {
+	// 		if(rarity == rarityOptions[0]){
+	// 			mineChance[0] = 70f;
+	// 			mineChance[1] = 15f;
+	// 			mineChance[2] = 10f;
+	// 			mineChance[3] = 4.5f;
+	// 			mineChance[4] = 0.5f;
+	// 		}else if(rarity == rarityOptions[1]){
+	// 			mineChance[0] = 65f;
+	// 			mineChance[1] = 20f;
+	// 			mineChance[2] = 10f;
+	// 			mineChance[3] = 4.5f;
+	// 			mineChance[4] = 0.5f;
+	// 			//mineChance = {65f,20f,10f,4.5f,0.5f};
+	// 		}else if(rarity == rarityOptions[2]){
+	// 			mineChance[0] = 55f;
+	// 			mineChance[1] = 20f;
+	// 			mineChance[2] = 15f;
+	// 			mineChance[3] = 9.5f;
+	// 			mineChance[4] = 0.5f;
+	// 			//mineChance = {55f,20f,15f,9.5f,0.5f};
+	// 		}else if(rarity == rarityOptions[3]){
+	// 			mineChance[0] = 45f;
+	// 			mineChance[1] = 15f;
+	// 			mineChance[2] = 20f;
+	// 			mineChance[3] = 15f;
+	// 			mineChance[4] = 5f;
+	// 			//mineChance = {45f,15f,20f,15f,5f};
+	// 		}else{}
+	// 	}
+	//} 
 	}
 	
 
