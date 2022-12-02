@@ -88,6 +88,7 @@ GameObject:
   - component: {fileID: 8179791974840129455}
   - component: {fileID: 547730334746588113}
   - component: {fileID: 3583551433093660221}
+  - component: {fileID: 4826421337362653995}
   m_Layer: 5
   m_Name: MinerUILeg
   m_TagString: Untagged
@@ -197,4 +198,35 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 547730334746588113}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4826421337362653995}
+        m_TargetAssemblyTypeName: InventoryBtn, Assembly-CSharp
+        m_MethodName: SendMinerPreview
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &4826421337362653995
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8390002435652553403}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39f6ddaec4abce2458c33014d8c2a73a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minerStats: {fileID: 11400000, guid: 6c02efcdc6b6d4b4eb2b0030e3886cfe, type: 2}
+  mineSpdPre: {fileID: 0}
+  bronzChPre: {fileID: 0}
+  ironChPre: {fileID: 0}
+  silverChPre: {fileID: 0}
+  goldChPre: {fileID: 0}
+  diamondChPre: {fileID: 0}

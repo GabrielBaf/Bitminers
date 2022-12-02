@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 
@@ -17,7 +19,29 @@ public class Miner : ScriptableObject {
 	public float maxMiningSpeed;
 	public float upgradeTimeMiningSpeed;
 	public float[] mineChance;
+	public bool empty = true;
+	public event Action<Miner> OnItemClicked,OnItemDroppedOn,OnItemBeginDrag,OnItemEndDrag,OnRightMouseClick;
 
+	public void OnBeginDrag(){
+    if(empty)
+        return;
+        OnItemBeginDrag?.Invoke(this);
+   }
+   public void OnDrop(){
+    OnItemDroppedOn?.Invoke(this);
+   }
+   public void OnEndDrag()
+   {
+    OnItemEndDrag?.Invoke(this);
+   }
+   public void OnPointerClick(BaseEventData data){
+    PointerEventData pointerData = (PointerEventData)data;
+    if(pointerData.button == PointerEventData.InputButton.Right){
+        OnRightMouseClick?.Invoke(this);
+    }else{
+        OnItemClicked?.Invoke(this);
+    }
+   }	
 
 	public float PresenteMiningSpeed{
 		get 
@@ -94,6 +118,7 @@ public class Miner : ScriptableObject {
 			}else{}
         }
     }
+	
 	// public float[] MineChance{
 	// 	get 
     //     {    
