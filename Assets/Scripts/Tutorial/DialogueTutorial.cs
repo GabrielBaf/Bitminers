@@ -7,7 +7,6 @@ using UnityEngine.SceneManagement;
 public class DialogueTutorial : MonoBehaviour
 {
     public Queue<string> sentences;
-    public GameObject dialogueUI;
     public Text textDialogueUI,nameText;
     // Start is called before the first frame update
     void Start()

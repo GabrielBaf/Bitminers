@@ -20,7 +20,7 @@ public class DialogueTutorialTrigger : MonoBehaviour
     comunMiner.SetActive(true);
    }
    public void EquipMinerTutorial(){
-      comunMiner.SetActive(false);
+    Destroy(comunMiner);
     MinerSlot2.SetActive(true);
     minerSprite2.SetActive(true);
     Ore2.SetActive(true);

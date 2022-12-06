@@ -26,7 +26,8 @@ public class UIDataFromDB : MonoBehaviour
          Debug.Log(userinf.inventory.created_at.ToString());
         int userId = userinf.inventory.user_id;
 
-        StartCoroutine(GetInventory(userId));
+        //StartCoroutine(GetInventory(userId));
+        StartCoroutine(GetInventory(1));
         string inventMiners = PlayerPrefs.GetString("InventoryMiner");
         InventoryMiner myInv = new InventoryMiner();
         myInv = JsonUtility.FromJson<InventoryMiner>(inventMiners);
@@ -70,11 +71,12 @@ public class UIDataFromDB : MonoBehaviour
     public void GetNewMiner(){
        // if(ERC20BalanceOfExample.walletBalance.CompareTo(valueToBuyMiner)){
         int userId = userinf.inventory.user_id;
-        StartCoroutine(GetMiner(userId));
+        //StartCoroutine(GetMiner(userId));
+        StartCoroutine(GetMiner(1));
         string miner = PlayerPrefs.GetString("NewMiner");
         Debug.Log(miner);
         NewMiner newMine = JsonUtility.FromJson<NewMiner>(miner);
-        //float randomNumb = Random.Range(0f, 100f);
+       // float randomNumb = Random.Range(0f, 100f);
         if(newMine.rarity == "common"){
             var newObj = GameObject.Instantiate(mineComPrefab);
             newObj.transform.parent = GameObject.Find("Content").transform;
