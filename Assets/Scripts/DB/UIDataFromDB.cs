@@ -23,7 +23,7 @@ public class UIDataFromDB : MonoBehaviour
          walletUI.text = walletValue;
 
          userinf = JsonUtility.FromJson<Data>(userInfor);
-         Debug.Log(userinf.inventory.user_id.ToString());
+         Debug.Log(userinf.inventory.created_at.ToString());
         int userId = userinf.inventory.user_id;
 
         StartCoroutine(GetInventory(userId));
