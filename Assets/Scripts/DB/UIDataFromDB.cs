@@ -57,7 +57,7 @@ public class UIDataFromDB : MonoBehaviour
     }
 
     public void GetNewMiner(){
-        if(ERC20BalanceOfExample.walletBalance.CompareTo(valueToBuyMiner)){
+       // if(ERC20BalanceOfExample.walletBalance.CompareTo(valueToBuyMiner)){
         int userId = userinf.inventory.user_id;
         StartCoroutine(GetMiner(userId));
         string miner = PlayerPrefs.GetString("NewMiner");
@@ -76,7 +76,7 @@ public class UIDataFromDB : MonoBehaviour
             var newObj = GameObject.Instantiate(mineLegPrefab);
             newObj.transform.parent = GameObject.Find("Content").transform;
         }
-        }
+        //}
     }
     public IEnumerator GetMiner(int pdId)
     {
