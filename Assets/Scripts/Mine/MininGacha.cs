@@ -2,13 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.Networking;
 using UnityEngine;
+using System;
 
 public class MininGacha : MonoBehaviour
 {
-   void Start(){
-          string account = PlayerPrefs.GetString("Account");
-          Debug.Log(account);
-   }
+   // void Start(){
+          
+   //        Debug.Log(miner);
+   // }
    // public Miner miner;
 
    // void GetNewMiner(){
@@ -17,3 +18,5 @@ public class MininGacha : MonoBehaviour
    //     // Debug.Log("New miner add");
    // }
 }
+
+   

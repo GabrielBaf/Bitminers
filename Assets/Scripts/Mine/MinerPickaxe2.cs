@@ -34,9 +34,9 @@ public class MinerPickaxe2 : MonoBehaviour
      MinerTime();
   }
   public void MinerTime(){
-      StartCoroutine(ExecuteAfterTime(InventoryBtn.minerEquiped2.PresenteMiningSpeed/3));
-      StartCoroutine(ExecuteAfterTime(InventoryBtn.minerEquiped2.PresenteMiningSpeed/2));
-      StartCoroutine(ExecuteAfterTime(InventoryBtn.minerEquiped2.PresenteMiningSpeed));
+    //   StartCoroutine(ExecuteAfterTime(InventoryBtn.minerEquiped2.PresenteMiningSpeed/3));
+    //   StartCoroutine(ExecuteAfterTime(InventoryBtn.minerEquiped2.PresenteMiningSpeed/2));
+    //   StartCoroutine(ExecuteAfterTime(InventoryBtn.minerEquiped2.PresenteMiningSpeed));
   }
 
 }

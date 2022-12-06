@@ -2,18 +2,22 @@ using System.Collections;
 using System.Numerics;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ERC20BalanceOfExample : MonoBehaviour
 {
+    public Text balance;
+    public static BigInteger walletBalance;
     async void Start()
     {
-        string wallet = PlayerPrefs.GetString("PlayerInfo");
+        //string wallet = PlayerPrefs.GetString("Wallet");
         string chain = "ethereum";
-        string network = "mainnet";
-        string contract = "0xdAC17F958D2ee523a2206206994597C13D831ec7";
-        string account = "0x000000ea89990a17Ec07a35Ac2BBb02214C50152";
+        string network = "Goerli";
+        string contract = "0x1c4ca12d35fA20288261BeD7FeaE4430E4Ec86e1";
+        string account = "0x12155DDd1d86C8345d1E75C3f2e2CeD6c1D8f725";
 
-        BigInteger balanceOf = await ERC20.BalanceOf(chain, network, contract, account);
-        print(balanceOf); 
+        BigInteger balanceOf = await ERC20.BalanceOf(chain, network, contract, account); 
+        balance.text = balanceOf.ToString();
+        walletBalance = balanceOf;
     }
 }

@@ -605,7 +605,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -1356.6914, y: 234.67702}
+  m_AnchoredPosition: {x: -1020, y: 264}
   m_SizeDelta: {x: 198.877, y: 56.928}
   m_Pivot: {x: 1, y: 0.5}
 --- !u!114 &63859800
@@ -1718,7 +1718,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -1555.553, y: 234.265}
+  m_AnchoredPosition: {x: -1218.8616, y: 263.58798}
   m_SizeDelta: {x: 189.763, y: 57.751}
   m_Pivot: {x: 1, y: 0.5}
 --- !u!114 &191261181
@@ -2887,7 +2887,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -434.84412, y: -0.00061035156}
+  m_AnchoredPosition: {x: -262.18, y: -0.00061035156}
   m_SizeDelta: {x: 377.352, y: 278.015}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &272739050
@@ -8953,11 +8953,10 @@ MonoBehaviour:
   pauseMenuUI: {fileID: 1921458433}
   pauseButton: {fileID: 13630196}
   minedoreBronze: {fileID: 614114387}
+  mineSilver: {fileID: 0}
+  mineGold: {fileID: 0}
   minedoreIron: {fileID: 211373773}
   minedoreDiamond: {fileID: 424249578}
-  mineredBronz: 0
-  mineredIron: 0
-  mineredDiamond: 0
 --- !u!4 &812337002
 Transform:
   m_ObjectHideFlags: 0
@@ -9320,8 +9319,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -4.8414364, y: -454.7625}
-  m_SizeDelta: {x: 2201.113, y: 98.571}
+  m_AnchoredPosition: {x: -4.085, y: -450.723}
+  m_SizeDelta: {x: 1856.539, y: 101.961}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &869613020
 CanvasRenderer:
@@ -11666,8 +11665,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -0.0075683594, y: 0}
-  m_SizeDelta: {x: 0.05810547, y: 49.615}
+  m_AnchoredPosition: {x: -0.007019043, y: 0}
+  m_SizeDelta: {x: -300.518, y: 51.322}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &1118709101
 MonoBehaviour:
@@ -12752,8 +12751,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1007.0075, y: -381.4335}
-  m_SizeDelta: {x: 196.775, y: 48.087}
+  m_AnchoredPosition: {x: -849.36646, y: -374.87225}
+  m_SizeDelta: {x: 165.971, y: 49.741}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1217685820
 MonoBehaviour:
@@ -15581,8 +15580,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -0.007509981, y: 0}
-  m_SizeDelta: {x: 2265.4, y: 199.133}
+  m_AnchoredPosition: {x: -0.007, y: 0}
+  m_SizeDelta: {x: 1910.763, y: 205.982}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &1523648264
 MonoBehaviour:
@@ -19045,7 +19044,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -0.00061035156}
+  m_AnchoredPosition: {x: 153, y: -0.00061035156}
   m_SizeDelta: {x: 200.28003, y: 55.15503}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1910151775
@@ -22883,30 +22882,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   minerStats: {fileID: 11400000, guid: 49db9cdc03f41204b91ecabc771cb5a5, type: 2}
-  mineSpdPre: {fileID: 2032164306}
-  bronzChPre: {fileID: 239344319}
-  ironChPre: {fileID: 482089410}
-  silverChPre: {fileID: 286195966}
-  goldChPre: {fileID: 892884338}
-  diamondChPre: {fileID: 1707014802}
-  miner1Btn: {fileID: 191261181}
-  miner2Btn: {fileID: 63859800}
-  miner1GO: {fileID: 0}
-  miner2GO: {fileID: 63859798}
-  mineSpd: {fileID: 0}
-  minedTime: {fileID: 0}
-  bronzCh: {fileID: 0}
-  ironCh: {fileID: 0}
-  silverCh: {fileID: 0}
-  goldCh: {fileID: 0}
-  diamondCh: {fileID: 0}
-  mineSpd2: {fileID: 1677421840}
-  minedTime2: {fileID: 535494929}
-  bronzCh2: {fileID: 500596719}
-  ironCh2: {fileID: 1864500261}
-  silverCh2: {fileID: 1672739841}
-  goldCh2: {fileID: 2125435420}
-  diamondCh2: {fileID: 1401172044}
 --- !u!224 &8973314545853681414
 RectTransform:
   m_ObjectHideFlags: 0

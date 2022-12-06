@@ -9,8 +9,10 @@ public class PlayerAccount : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-       // string account = PlayerPrefs.GetString("Account");
-       string account = "0x920192019200a9f0a9s92s09a0s960sa";
+        //string account = PlayerPrefs.GetString("Account");
+        string account = "0x920192019200a9f0a9s92s09a0s960sa";
+      // string account = "0x1F571B139599e93F927ec393dDdCF80305eB7C9d"; 
+        //PlayerPrefs.SetString("Wallet", account);
         StartCoroutine(LoginCheck(account));
        
     }

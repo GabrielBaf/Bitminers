@@ -52,54 +52,56 @@ public class InventoryBtn : MonoBehaviour
      //     string account = PlayerPrefs.GetString("Account");
      //      StartCoroutine(LoginCheck(account));
          string userInfor = PlayerPrefs.GetString("PlayerInfo");
-        //Data userinf = JsonUtility.FromJson<Data>(userInfor);
+
+         Data userinf = JsonUtility.FromJson<Data>(userInfor);
+         Debug.Log(userinf.inventory.iron_ore.ToString());
          //userinf = JsonUtility.FromJson<Data>(userInfor);
-         Debug.Log(userInfor[39]);
+        // Debug.Log(userInfor[39]);
           //Debug.Log(userinf.inventory.iron_ore.ToString());
          //Debug.Log(userinf.inventory.iron_ore.ToString());
 
          miner1GO.SetActive(false);
          miner2GO.SetActive(false);
     }
-   #region 
-     [Serializable]
-      public class Data
-    {
-        public Inventory inventory { get; set; }
-        public List<MinerStat> minerStats { get; set; }
-    }
-     [Serializable]
-    public class Inventory
-    {
-        public int id { get; set; }
-        public int user_id { get; set; }
-        public int iron_ore { get; set; }
-        public int bronze_ore { get; set; }
-        public int silver_ore { get; set; }
-        public int gold_ore { get; set; }
-        public int diamond_ore { get; set; }
-        public DateTime created_at { get; set; }
-        public DateTime updated_at { get; set; }
-    }
-     [Serializable]
-    public class MinerStat
-    {
-        public int id { get; set; }
-        public int user_id { get; set; }
-        public string rarity { get; set; }
-        public int boost_level { get; set; }
-        public string mining_start { get; set; }
-        public string mining_end { get; set; }
-        public DateTime created_at { get; set; }
-        public DateTime updated_at { get; set; }
-    }
-     [Serializable]
-    public class Root
-    {
-        public Data data { get; set; }
-    }
+//    #region 
+//      [Serializable]
+//       public class Data
+//     {
+//         public Inventory inventory;
+//         public List<MinerStat> minerStats; 
+//     }
+//      [Serializable]
+//     public class Inventory
+//     {
+//         public int id; 
+//         public int user_id;
+//         public int iron_ore; 
+//         public int bronze_ore; 
+//         public int silver_ore;
+//         public int gold_ore; 
+//         public int diamond_ore; 
+//         public DateTime created_at; 
+//         public DateTime updated_at; 
+//     }
+//      [Serializable]
+//     public class MinerStat
+//     {
+//         public int id; 
+//         public int user_id; 
+//         public string rarity; 
+//         public int boost_level; 
+//         public string mining_start; 
+//         public string mining_end; 
+//         public DateTime created_at; 
+//         public DateTime updated_at; 
+//     }
+//      [Serializable]
+//     public class Root
+//     {
+//         public Data data; 
+//     }
 
-   #endregion
+//    #endregion
  
 //    IEnumerator LoginCheck(string pAccount)
 //     {
