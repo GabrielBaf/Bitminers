@@ -17,6 +17,7 @@ public class WebGLTransfer20: MonoBehaviour
     
     async public void Transfer()
     {
+        
         // smart contract method to call
         string method = "transfer";
         // array of arguments for contract
