@@ -230,3 +230,21 @@ MonoBehaviour:
   silverChPre: {fileID: 0}
   goldChPre: {fileID: 0}
   diamondChPre: {fileID: 0}
+  miner1Btn: {fileID: 0}
+  miner2Btn: {fileID: 0}
+  miner1GO: {fileID: 0}
+  miner2GO: {fileID: 0}
+  mineSpd: {fileID: 0}
+  minedTime: {fileID: 0}
+  bronzCh: {fileID: 0}
+  ironCh: {fileID: 0}
+  silverCh: {fileID: 0}
+  goldCh: {fileID: 0}
+  diamondCh: {fileID: 0}
+  mineSpd2: {fileID: 0}
+  minedTime2: {fileID: 0}
+  bronzCh2: {fileID: 0}
+  ironCh2: {fileID: 0}
+  silverCh2: {fileID: 0}
+  goldCh2: {fileID: 0}
+  diamondCh2: {fileID: 0}

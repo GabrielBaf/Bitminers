@@ -2,13 +2,15 @@ using System.Collections;
 using UnityEngine.Networking;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerAccount : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
     {
-        string account = PlayerPrefs.GetString("Account");
+       // string account = PlayerPrefs.GetString("Account");
+       string account = "0x920192019200a9f0a9s92s09a0s960sa";
         StartCoroutine(LoginCheck(account));
        
     }
@@ -36,8 +38,23 @@ public class PlayerAccount : MonoBehaviour
             {
                 Debug.Log(www.downloadHandler.text);
                 string data = www.downloadHandler.text;
-                print(data);
+                //Debug.Log(data);
+                PlayerPrefs.SetString("PlayerInfo", data);
+                //print(data);
             }
         }
     }
+    public void NextScene(){
+        SceneManager.LoadScene(1);
+    }
+    
+    // public void MyJson(){
+    //     public int userid;
+    //     public int inventoryId;
+    //     public int bronzeOre;
+    //     public int ironOre;
+    //     public int silverOre;
+    //     public int goldOre;
+    //     public int diamondOre;
+    // }
 }

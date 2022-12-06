@@ -11,13 +11,14 @@ public class ResourcesUI : MonoBehaviour
    public GameObject pauseButton;
 
    //Resources values
-   public Text minedoreBronze;
+   public Text minedoreBronze,mineSilver,mineGold;
    public Text minedoreIron;
    public Text minedoreDiamond;
-    public int mineredBronz;
-    public int mineredIron;
-    public int mineredDiamond;
-
+   string userInfor;
+//     public int mineredBronz;
+//     public int mineredIron;
+//     public int mineredDiamond;
+    
     //Equiped miners
     static public Miner Miner1,Miner2;
    
@@ -26,15 +27,19 @@ public class ResourcesUI : MonoBehaviour
 
 //     public float[] minerChan1;
 //     public float[] minerChan2;
-
+     public void Start(){
+         userInfor  = PlayerPrefs.GetString("PlayerInfo");
+     }
     // Update is called once per frame
     void Update()
     { 
         
 
-         minedoreBronze.text = "Bronze: " + mineredBronz; 
-         minedoreIron.text = "Iron: " + mineredIron; 
-         minedoreDiamond.text = "Diamond: " + mineredDiamond;
+         minedoreBronze.text = "Bronze: " + userInfor[67]; 
+         minedoreIron.text = "Iron: " + userInfor[52]; 
+         mineSilver.text = "Silver: " + userInfor[82];
+         mineGold.text = "Gold: " + userInfor[95];
+         minedoreDiamond.text = "Diamond: " + userInfor[111];
 
           //Display miner stats
           //   minerChan1 = Miner1.MineChance;

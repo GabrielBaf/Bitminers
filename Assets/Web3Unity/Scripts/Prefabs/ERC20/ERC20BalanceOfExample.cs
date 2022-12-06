@@ -7,6 +7,7 @@ public class ERC20BalanceOfExample : MonoBehaviour
 {
     async void Start()
     {
+        string wallet = PlayerPrefs.GetString("PlayerInfo");
         string chain = "ethereum";
         string network = "mainnet";
         string contract = "0xdAC17F958D2ee523a2206206994597C13D831ec7";

@@ -48,12 +48,12 @@ public class MinerSprite : MonoBehaviour
             {
                 oreType += mineriosNomes[i];
                 if(i == 0){
-                    UI.mineredBronz ++;
+                   // UI.mineredBronz ++;
                 }else if(i == 1){
-                     UI.mineredIron ++;
+                   //  UI.mineredIron ++;
                    
                 }else{
-                    UI.mineredDiamond ++;
+                   // UI.mineredDiamond ++;
                     
                 }
                 hitPoints = 3;
