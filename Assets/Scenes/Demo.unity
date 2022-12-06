@@ -605,7 +605,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -1143.6846, y: 130.0119}
+  m_AnchoredPosition: {x: -1152, y: 189}
   m_SizeDelta: {x: 157.31, y: 72.116}
   m_Pivot: {x: 1, y: 0.5}
 --- !u!114 &63859800
@@ -1545,7 +1545,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Bronze chance:'
+  m_Text: Bronze chance:70%
 --- !u!222 &159072974
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1823,7 +1823,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -1301, y: 130}
+  m_AnchoredPosition: {x: -1309.3154, y: 188.98807}
   m_SizeDelta: {x: 147.935, y: 72.103}
   m_Pivot: {x: 1, y: 0.5}
 --- !u!114 &191261181
@@ -2873,7 +2873,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -342.98853, y: 274.89594}
+  m_AnchoredPosition: {x: -342.99, y: 347}
   m_SizeDelta: {x: -1601.395, y: -721.12994}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &272739050
@@ -5189,7 +5189,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Bronze chance:'
+  m_Text: Bronze chance:70%
 --- !u!222 &500596720
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5516,7 +5516,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Time left to mine:
+  m_Text: 'Time left to mine:24Hr
 
 '
 --- !u!222 &535494930
@@ -11286,7 +11286,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Time left to mine:
+  m_Text: 'Time left to mine:24Hr
 
 '
 --- !u!222 &1052661289
@@ -13644,7 +13644,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Gold chance:'
+  m_Text: Gold chance:4.5%
 --- !u!222 &1292849064
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -14886,7 +14886,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Diamond chance:'
+  m_Text: Diamond chance:0.5%
 --- !u!222 &1401172045
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -15810,7 +15810,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Iron chance:'
+  m_Text: Iron chance:15%
 --- !u!222 &1517570763
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -17122,7 +17122,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Silver chance:'
+  m_Text: Silver chance:10%
 --- !u!222 &1672739842
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -17275,7 +17275,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Mining Speed: \n"
+  m_Text: 'Mining Speed: 24Hr
+
+'
 --- !u!222 &1677421841
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -18276,7 +18278,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Silver chance:'
+  m_Text: Silver chance:10%
 --- !u!222 &1784524103
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -18733,7 +18735,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Iron chance:'
+  m_Text: Iron chance:15%
 --- !u!222 &1864500262
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -19881,7 +19883,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Diamond chance:'
+  m_Text: Diamond chance:0.5%
 --- !u!222 &1965346581
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -20307,7 +20309,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Mining Speed: \n"
+  m_Text: 'Mining Speed: 24HR
+
+'
 --- !u!222 &1995207548
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -21785,7 +21789,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Gold chance:'
+  m_Text: Gold chance:4.5%
 --- !u!222 &2125435421
 CanvasRenderer:
   m_ObjectHideFlags: 0

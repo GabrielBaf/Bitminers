@@ -23,7 +23,18 @@ public class UIDataFromDB : MonoBehaviour
          walletUI.text = walletValue;
 
          userinf = JsonUtility.FromJson<Data>(userInfor);
-         Debug.Log(userinf.inventory.iron_ore.ToString());
+         Debug.Log(userinf.inventory.user_id.ToString());
+        int userId = userinf.inventory.user_id;
+
+        StartCoroutine(GetInventory(userId));
+        string inventMiners = PlayerPrefs.GetString("InventoryMiner");
+        InventoryMiner myInv = new InventoryMiner();
+        myInv = JsonUtility.FromJson<InventoryMiner>(inventMiners);
+        List<MinersInventory> allInven = new List<MinersInventory>(myInv.minersOnInven);
+        foreach(MinersInventory item in allInven){
+           Debug.Log(item.rarity);
+        }
+
 
        totalBronze.text = "Bronze: " + userinf.inventory.bronze_ore.ToString();
        totalIron.text = "Iron: " + userinf.inventory.iron_ore.ToString();
@@ -63,6 +74,7 @@ public class UIDataFromDB : MonoBehaviour
         string miner = PlayerPrefs.GetString("NewMiner");
         Debug.Log(miner);
         NewMiner newMine = JsonUtility.FromJson<NewMiner>(miner);
+        //float randomNumb = Random.Range(0f, 100f);
         if(newMine.rarity == "common"){
             var newObj = GameObject.Instantiate(mineComPrefab);
             newObj.transform.parent = GameObject.Find("Content").transform;
@@ -78,6 +90,8 @@ public class UIDataFromDB : MonoBehaviour
         }
         //}
     }
+    //http://127.0.0.1:8000/api/miner-inventory
+
     public IEnumerator GetMiner(int pdId)
     {
         WWWForm form = new WWWForm();
@@ -97,6 +111,29 @@ public class UIDataFromDB : MonoBehaviour
                 Debug.Log(www.downloadHandler.text);
                 string data = www.downloadHandler.text;
                 PlayerPrefs.SetString("NewMiner", data);
+                Debug.Log(data);
+            }
+        }
+    }
+        public IEnumerator GetInventory(int pdId)
+    {
+        WWWForm form = new WWWForm();
+        form.AddField("user_id",pdId);
+
+        using (UnityWebRequest www = UnityWebRequest.Post("http://127.0.0.1:8000/api/miner-inventory", form))
+        {
+            yield return www.SendWebRequest();
+
+            if (www.result != UnityWebRequest.Result.Success)
+            {
+                Debug.Log(www.error);
+                Debug.Log("n foi");
+            }
+            else
+            {
+                Debug.Log(www.downloadHandler.text);
+                string data = www.downloadHandler.text;
+                PlayerPrefs.SetString("InventoryMiner", data);
                 Debug.Log(data);
             }
         }
@@ -147,6 +184,23 @@ public class UIDataFromDB : MonoBehaviour
         public DateTime updated_at;
         public DateTime created_at;
         public int id;
+    }
+    [Serializable]
+    public class InventoryMiner
+    {
+        public List<MinersInventory> minersOnInven; 
+    }
+    [Serializable]
+    public class MinersInventory
+    {
+        public int id;
+        public int user_id;
+        public string rarity;
+        public int boost_level;
+        public object mining_start;
+        public object mining_end;
+        public DateTime created_at;
+        public DateTime updated_at;
     }
 
 
